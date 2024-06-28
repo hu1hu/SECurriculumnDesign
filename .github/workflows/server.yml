@@ -96,7 +96,7 @@ jobs:
               -e INFLUXDB_URL=${{ secrets.INFLUXDB_URL }} \
               -e INFLUXDB_TOKEN=${{ secrets.INFLUXDB_TOKEN }} \
               -e KAFKA_BOOTSTRAP_SERVERS=${{ secrets.KAFKA_BOOTSTRAP_SERVERS }} \
-              -e KAFKA_SASL_JAAS_CONFIG=${{ secrets.KAFKA_SASL_JAAS_CONFIG }} \
+              -e KAFKA_SASL_JAAS_CONFIG='${{ secrets.KAFKA_SASL_JAAS_CONFIG }}' \
               -e GITEE_CLIENT_ID=${{ secrets.GITEE_CLIENT_ID }} \
               -e GITEE_CLIENT_SECRET=${{ secrets.GITEE_CLIENT_SECRET }} \
               -e GITHUB_CLIENT_ID=${{ secrets.GITHUB_CLIENT_ID }} \
