@@ -84,7 +84,7 @@ jobs:
             docker stop pim-server-container || true
             docker rm pim-server-container || true
             
-            # 运行新的容器实例
+            # 运行新的容器实例，并传递环境变量
             docker run -d --name pim-server-container \
               -p 8000:8000 \
               -e DATASOURCE_URL=${{ secrets.DATASOURCE_URL }} \
