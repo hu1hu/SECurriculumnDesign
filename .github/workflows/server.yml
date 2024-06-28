@@ -87,4 +87,23 @@ jobs:
             # 运行新的容器实例
             docker run -d --name pim-server-container \
               -p 8000:8000 \
+              --env DATASOURCE_URL=${{ secrets.DATASOURCE_URL }} \
+              --env DATASOURCE_USERNAME=${{ secrets.DATASOURCE_USERNAME }} \
+              --env DATASOURCE_PASSWORD=${{ secrets.DATASOURCE_PASSWORD }} \
+              --env REDIS_HOST=${{ secrets.REDIS_HOST }} \
+              --env REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }} \
+              --env REDIS_PORT=${{ secrets.REDIS_PORT }} \
+              --env INFLUXDB_URL=${{ secrets.INFLUXDB_URL }} \
+              --env INFLUXDB_TOKEN=${{ secrets.INFLUXDB_TOKEN }} \
+              --env KAFKA_BOOTSTRAP_SERVERS=${{ secrets.KAFKA_BOOTSTRAP_SERVERS }} \
+              --env KAFKA_SASL_JAAS_CONFIG=${{ secrets.KAFKA_SASL_JAAS_CONFIG }} \
+              --env GITEE_CLIENT_ID=${{ secrets.GITEE_CLIENT_ID }} \
+              --env GITEE_CLIENT_SECRET=${{ secrets.GITEE_CLIENT_SECRET }} \
+              --env GITHUB_CLIENT_ID=${{ secrets.GITHUB_CLIENT_ID }} \
+              --env GITHUB_CLIENT_SECRET=${{ secrets.GITHUB_CLIENT_SECRET }} \
+              --env WEICHAT_OPEN_CLIENT_ID=${{ secrets.WEICHAT_OPEN_CLIENT_ID }} \
+              --env WEICHAT_OPEN_CLIENT_SECRET=${{ secrets.WEICHAT_OPEN_CLIENT_SECRET }} \
+              --env ALIYUN_ACCESS_KEY_ID=${{ secrets.ALIYUN_ACCESS_KEY_ID }} \
+              --env ALIYUN_ACCESS_KEY_SECRET=${{ secrets.ALIYUN_ACCESS_KEY_SECRET }} \
+              --env JWT_SECRET=${{ secrets.JWT_SECRET }} \
               pim-server
