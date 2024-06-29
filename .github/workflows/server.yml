@@ -97,8 +97,8 @@ jobs:
               -e INFLUXDB_URL=${{ secrets.INFLUXDB_URL }} \
               -e INFLUXDB_TOKEN=${{ secrets.INFLUXDB_TOKEN }} \
               -e KAFKA_BOOTSTRAP_SERVERS=${{ secrets.KAFKA_BOOTSTRAP_SERVERS }} \
-              -e USERNAME=${{ secrets.USERNAME }}
-              -e PASSWORD=${{ secrets.PASSWORD }}
+              -e USERNAME=${{ secrets.USERNAME }} \
+              -e PASSWORD=${{ secrets.PASSWORD }} \
               -e GITEE_CLIENT_ID=${{ secrets.GITEE_CLIENT_ID }} \
               -e GITEE_CLIENT_SECRET=${{ secrets.GITEE_CLIENT_SECRET }} \
               -e GITHUB_CLIENT_ID=${{ secrets.CLIENT_ID }} \
