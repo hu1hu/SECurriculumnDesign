@@ -121,8 +121,8 @@ justauth:
       client-secret: ${GITHUB_CLIENT_SECRET}
       redirect-uri: https://api.pimonitor.top/github/callback
     WECHAT_OPEN:
-      client-id: ${WECHAT_OPEN_CLIENT_ID}
-      client-secret: ${WECHAT_OPEN_CLIENT_SECRET}
+      client-id: ${WEICHAT_OPEN_CLIENT_ID}
+      client-secret: ${WEICHAT_OPEN_CLIENT_SECRET}
       redirect-uri: https://api.pimonitor.top/wechat_open/callback
 
   cache:
